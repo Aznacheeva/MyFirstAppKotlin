@@ -7,7 +7,7 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         val view = findViewById<TextView>(R.id.testView)
-        view.text = "Привет"
+        /*view.text = "Привет"*/
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var student = Student("Софья", 3)
