@@ -10,15 +10,8 @@ class MainActivity : AppCompatActivity() {
         view.text = "Привет"
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var student = Student("Ivan", 2)
+        var student = Student("Софья", 3)
         print(student.name)
         print(student.toString())
     }
-}
-
-data class Student(var name : String, var course : Int = 1) {
-    override fun toString(): String {
-        return "My name is $name and I'm in my $course year"
-    }
-
 }
