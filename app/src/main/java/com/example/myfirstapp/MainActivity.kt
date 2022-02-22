@@ -12,8 +12,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var textView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        /*val view = findViewById<TextView>(R.id.textView)*/
-        /*view.text = "Привет"*/
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         textView = findViewById(R.id.textView)
@@ -21,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         print(student.toString())
     }
 
-    fun studentHello(view: View) {
+    fun studentMe(view: View) {
         val myStudent = Toast.makeText(this, "Hello, ${student.name}", Toast.LENGTH_SHORT)
         myStudent.show()
     }
@@ -34,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
     fun randomMe(view: View) {
         val randomIntent = Intent(this, SecondActivity::class.java)
-        var count: Int = Integer.parseInt(textView.text.toString())
+        val count: Int = Integer.parseInt(textView.text.toString())
         randomIntent.putExtra(SecondActivity.TOTAL_COUNT, count)
         startActivity(randomIntent)
     }

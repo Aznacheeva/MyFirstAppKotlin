@@ -5,4 +5,5 @@
     <string name="count_btn_name">Count</string>
     <string name="random_name">Random</string>
     <string name="random_heading">Это случайное число между 0 и %1d.</string>
+    <string name="back">Back</string>
 </resources>

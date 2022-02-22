@@ -1,7 +1,9 @@
 package com.example.myfirstapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import java.util.*
 
@@ -30,5 +32,10 @@ class SecondActivity : AppCompatActivity() {
         }
         this.random.text = randomInt.toString()
         label.text = getString(R.string.random_heading, count)
+    }
+
+    fun backMe(view: View) {
+        val mainIntent = Intent(this, MainActivity::class.java)
+        startActivity(mainIntent)
     }
 }
