@@ -20,13 +20,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun studentMe(view: View) {
-        val myStudent = Toast.makeText(this, "Hello, ${student.name}", Toast.LENGTH_SHORT)
+        val myStudent = Toast.makeText(this, student.toString(), Toast.LENGTH_SHORT)
         myStudent.show()
     }
 
-    fun countMe(view: View) {
+    fun addMe(view: View) {
         var count: Int = Integer.parseInt(textView.text.toString())
         count++
+        textView.text = count.toString()
+    }
+
+    fun substractMe(view: View) {
+        var count: Int = Integer.parseInt(textView.text.toString())
+        if (count > 0) {
+            count--
+        }
         textView.text = count.toString()
     }
 
