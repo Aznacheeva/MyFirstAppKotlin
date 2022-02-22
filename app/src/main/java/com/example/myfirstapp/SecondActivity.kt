@@ -21,14 +21,14 @@ class SecondActivity : AppCompatActivity() {
         showRandomNumber()
     }
 
-    fun showRandomNumber() {
+    private fun showRandomNumber() {
         val random = Random()
         val count = intent.getIntExtra(TOTAL_COUNT, 0)
         var randomInt = 0
         if (count > 0) {
             randomInt = random.nextInt(count + 1)
         }
-        this.random.text = Integer.toString(randomInt)
+        this.random.text = randomInt.toString()
         label.text = getString(R.string.random_heading, count)
     }
 }
